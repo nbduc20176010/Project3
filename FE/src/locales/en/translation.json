@@ -1,0 +1,30 @@
+{
+    "content": {
+        "EN": "EN",
+        "Home": "Home",
+        "Products": "Products",
+        "login": "Login",
+        "button": {
+            "detail": "Detail"
+        },
+        "footer": {
+            "privacy_policy": "Privacy policy ",
+            "term_of_use": "Term of use",
+            "contact_us": "Contact us"
+        },
+        "form": {
+            "username": "Username",
+            "password": "Password",
+            "email": "Email",
+            "submit_btn": "Submit",
+            "cancel_btn": "Cancel"
+        },
+        "message": {
+            "password_required": "Password is required!",
+            "username_required": "Username is required!",
+            "email_required": "Email is required!",
+            "register_new_account": "Register new account",
+            "already_have_account": "Already have account"
+        }
+    }
+}

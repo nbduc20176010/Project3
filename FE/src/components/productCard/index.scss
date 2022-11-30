@@ -1,0 +1,22 @@
+.product_card_container {
+    .ant-card-body {
+        padding: 10px;
+        .card_button {
+            background-color: #ff7875;
+            color: #ffffff;
+            border: none;
+            position: relative;
+            &:hover {
+                background-color: #ff9c6e;
+                top: -2px;
+            }
+        }
+        .ant-card-meta {
+            .ant-card-meta-detail {
+                .ant-card-meta-title {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

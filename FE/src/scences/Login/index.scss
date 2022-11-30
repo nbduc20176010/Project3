@@ -1,0 +1,22 @@
+.switch_form_trigger {
+    position: relative;
+    left: 2em;
+    &:hover {
+        color: #1890ff;
+        cursor: pointer;
+    }
+}
+
+.form_btn_container {
+    display: flex;
+    justify-content: right;
+    padding-right: 2em;
+}
+
+#small_success_msg {
+    color: #95de64;
+}
+
+#small_error_msg {
+    color: #ff4d4f;
+}

@@ -1,0 +1,21 @@
+.navbar_component {
+    #logo_navbar {
+        height: 80%;
+        width: 45px;
+    }
+    .ant-menu-item {
+        padding: 0px 15px !important;
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #f0f0f0;
+    #login_link {
+        color: #000000;
+        &:hover {
+            color: #1890ff;
+        }
+    }
+}

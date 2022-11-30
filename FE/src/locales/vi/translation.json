@@ -1,0 +1,30 @@
+{
+    "content": {
+        "VI": "VI",
+        "Home": "Trang chủ",
+        "Products": "Sản phẩm",
+        "login": "Đăng nhập",
+        "button": {
+            "detail": "Chi tiết"
+        },
+        "footer": {
+            "privacy_policy": "Điều khoản bảo mật",
+            "term_of_use": "Điều khoản sử dụng",
+            "contact_us": "Liên Hệ"
+        },
+        "form": {
+            "username": "Tài khoản",
+            "password": "Mật khẩu",
+            "email": "Email",
+            "submit_btn": "Hoàn tất",
+            "cancel_btn": "Hủy"
+        },
+        "message": {
+            "password_required": "Mật khẩu không được để trống!",
+            "username_required": "Tài khoản không được để trống!",
+            "email_required": "Email không được để trống!",
+            "register_new_account": "Đăng ký tài khoản",
+            "already_have_account": "Đã có tài khoản"
+        }
+    }
+}
