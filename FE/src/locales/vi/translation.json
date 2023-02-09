@@ -4,8 +4,30 @@
         "Home": "Trang chủ",
         "Products": "Sản phẩm",
         "login": "Đăng nhập",
+        "month": "tháng",
+        "months": "tháng",
+        "orderTitle": "Xác nhận đơn hàng",
+        "product_category_desc": "Phân loại sản phẩm : ",
+        "Product_desc": "Thông tin sản phẩm ",
+        "product_current_status": "Tình trạng sản phẩm : ",
+        "product_available": "còn hàng",
+        "product_unavailable": "hết hàng",
+        "userInformation": "Thông tin",
+        "category": {
+            "show_all_category": "Tất cả sản phẩm",
+            "card_category": "Thẻ cào",
+            "game_category": "Game",
+            "gift_coupon": "Coupon quà tặng",
+            "product_list": "Danh sách sản phẩm",
+            "user_list": "Danh sách người dùng",
+            "order_list": "Danh sách đơn hàng",
+            "user_informations": "Thông tin cá nhân",
+            "order_history": "Lịch sử đặt hàng"
+        },
         "button": {
-            "detail": "Chi tiết"
+            "detail": "Chi tiết",
+            "buy_product": "mua hàng",
+            "logout": "Đăng xuất"
         },
         "footer": {
             "privacy_policy": "Điều khoản bảo mật",
@@ -22,7 +44,7 @@
         "message": {
             "password_required": "Mật khẩu không được để trống!",
             "username_required": "Tài khoản không được để trống!",
-            "email_required": "Email không được để trống!",
+            "email_validation": "Email không hợp lệ!",
             "register_new_account": "Đăng ký tài khoản",
             "already_have_account": "Đã có tài khoản"
         }

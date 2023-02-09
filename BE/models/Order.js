@@ -7,17 +7,28 @@ const orderSchema = new mongoose.Schema(
             required: true,
             ref: "User",
         },
-        products: {
-            productId: String,
-            quantity: {
-                type: Number,
-                default: 1,
-            },
+        productId: {
+            type: String,
+            required: true,
+            ref: "Product",
+        },
+        productName: {
+            type: String,
+            required: true,
+        },
+        quantity: {
+            type: Number,
+            required: true,
         },
         total: {
             type: Number,
             required: true,
         },
+        key: [
+            {
+                type: String,
+            },
+        ],
         status: {
             type: String,
             default: "Pending",

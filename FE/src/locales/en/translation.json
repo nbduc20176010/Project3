@@ -4,8 +4,30 @@
         "Home": "Home",
         "Products": "Products",
         "login": "Login",
+        "month": "month",
+        "months": "months",
+        "orderTitle": "Confirming order",
+        "product_category_desc": "Product category : ",
+        "Product_desc": "Product informations ",
+        "product_current_status": "Product status : ",
+        "product_available": "available",
+        "product_unavailable": "unavailable",
+        "userInformation": "Information",
+        "category": {
+            "show_all_category": "Show all",
+            "card_category": "Card",
+            "game_category": "Game",
+            "gift_coupon": "Gift coupon",
+            "product_list": "Product list",
+            "user_list": "User list",
+            "order_list": "Order list",
+            "user_informations": "User informations",
+            "order_history": "Order history"
+        },
         "button": {
-            "detail": "Detail"
+            "detail": "Detail",
+            "buy_product": "buy products",
+            "logout": "Log Out"
         },
         "footer": {
             "privacy_policy": "Privacy policy ",
@@ -22,7 +44,7 @@
         "message": {
             "password_required": "Password is required!",
             "username_required": "Username is required!",
-            "email_required": "Email is required!",
+            "email_validation": "Please use valid email!",
             "register_new_account": "Register new account",
             "already_have_account": "Already have account"
         }

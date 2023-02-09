@@ -4,6 +4,7 @@ import api from "../../services/api";
 interface iAuth {
     status: "standby" | "loading" | "finish" | "failed";
     authMessage: string;
+    checkLogin: boolean;
 }
 
 interface iAuthInput {
@@ -15,6 +16,7 @@ interface iAuthInput {
 const initialState: iAuth = {
     status: "standby",
     authMessage: "",
+    checkLogin: false,
 };
 
 export const signUpUser = createAsyncThunk(
@@ -36,14 +38,24 @@ export const signInUser = createAsyncThunk(
         return res.data;
     }
 );
+export const logOut = createAsyncThunk(
+    "/auth/logout",
+    async (token: string) => {
+        if (token) {
+            const res = await api.post("/auth/logout", { token: token });
+            return res.data;
+        }
+    }
+);
 
 export const authSlice = createSlice({
-    name: "auth",
+    name: "Auth",
     initialState,
     reducers: {
         resetAuthStatus: (state) => {
             state.status = "standby";
             state.authMessage = "";
+            state.checkLogin = false;
         },
     },
     extraReducers(builder) {
@@ -73,7 +85,9 @@ export const authSlice = createSlice({
             } else {
                 state.status = "finish";
                 state.authMessage = "login successed!";
+                state.checkLogin = true;
                 localStorage.setItem("member", action.payload._id);
+                localStorage.setItem("username", action.payload.username);
                 localStorage.setItem("token", action.payload.accessToken);
                 localStorage.setItem(
                     "role",
@@ -83,6 +97,13 @@ export const authSlice = createSlice({
         });
         builder.addCase(signInUser.rejected, (state, _) => {
             state.status = "failed";
+        });
+        builder.addCase(logOut.fulfilled, (state, _) => {
+            state.checkLogin = true;
+            localStorage.removeItem("member");
+            localStorage.removeItem("username");
+            localStorage.removeItem("token");
+            localStorage.removeItem("role");
         });
     },
 });

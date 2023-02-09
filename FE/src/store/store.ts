@@ -1,7 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
+import adminSlice from "./features/adminSlice";
 import authSlice from "./features/authSlice";
 import commonSlice from "./features/commonSlice";
+import orderSlice from "./features/orderSlice";
+import productSlice from "./features/productSlice";
 import userSlice from "./features/userSlice";
 
 export const store = configureStore({
@@ -9,6 +12,9 @@ export const store = configureStore({
         common: commonSlice,
         auth: authSlice,
         user: userSlice,
+        products: productSlice,
+        admin: adminSlice,
+        order: orderSlice,
     },
 });
 

@@ -52,7 +52,7 @@ const Login: React.FC = () => {
             closeLoginModal();
         }
         authStatus === "finish" && dispatch(resetAuthStatus());
-    }, [authStatus, dispatch, messageApi]);
+    }, [authStatus, dispatch, messageApi, authMessage]);
 
     const LoginForm = () => (
         <Form
@@ -88,7 +88,6 @@ const Login: React.FC = () => {
             >
                 <Input.Password placeholder={t("content.form.password")} />
             </Form.Item>
-
             <div style={{ display: "flex", justifyContent: "flex-end" }}>
                 {authStatus === "failed" && (
                     <span id="small_error_msg">{authMessage}</span>
@@ -109,7 +108,7 @@ const Login: React.FC = () => {
                         htmlType="submit"
                         loading={authStatus === "loading" ? true : false}
                     >
-                        {t("content.form.submit_btn")}
+                        {t("content.login")}
                     </Button>
                     <Button onClick={closeLoginModal}>
                         {t("content.form.cancel_btn")}
@@ -161,7 +160,8 @@ const Login: React.FC = () => {
                 rules={[
                     {
                         required: true,
-                        message: `${t("content.message.email_required")}`,
+                        type: "email",
+                        message: `${t("content.message.email_validation")}`,
                     },
                 ]}
                 style={{ marginBottom: "0" }}

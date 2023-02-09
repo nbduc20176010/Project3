@@ -15,10 +15,17 @@ const productSchema = new mongoose.Schema(
             type: String,
             required: true,
         },
-        categoryId: {
-            type: mongoose.Schema.Types.ObjectId,
+        category: {
+            type: String,
             required: true,
-            ref: "Category",
+        },
+        quantity: {
+            type: Number,
+            required: true,
+        },
+        image: {
+            data: String,
+            contentType: String,
         },
         price: {
             type: Number,
@@ -27,6 +34,9 @@ const productSchema = new mongoose.Schema(
         currency: {
             type: String,
             required: true,
+        },
+        status: {
+            type: String,
         },
     },
     {

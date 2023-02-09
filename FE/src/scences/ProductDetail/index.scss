@@ -1,0 +1,32 @@
+.product_detail_container {
+    display: flex;
+    .product_detail_img {
+        width: 50%;
+        height: 100%;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            height: 600px;
+        }
+    }
+
+    .product_detail_func {
+        padding: 30px 10px;
+        .product_detail_contents {
+            min-height: 40%;
+            h2 {
+                font-size: 24px;
+                &:first-child {
+                    margin-top: 10px;
+                }
+            }
+        }
+        .buy_product_button {
+            width: 200px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+    }
+}

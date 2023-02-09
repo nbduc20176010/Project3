@@ -8,7 +8,6 @@ const userRouter = require("./routers/user");
 const authRouter = require("./routers/auth");
 const productRouter = require("./routers/product");
 const orderRouter = require("./routers/order");
-const categoryRouter = require("./routers/category");
 
 mongoose
     .connect(process.env.DB_CONNECTION)
@@ -27,7 +26,7 @@ app.use("/api/user", userRouter);
 app.use("/api/order", orderRouter);
 app.use("/api/product", productRouter);
 app.use("/api/auth", authRouter);
-app.use("/api/category", categoryRouter);
+app.use(express.static("uploads"));
 
 app.listen(process.env.PORT || 5000, () => {
     console.log("app running");

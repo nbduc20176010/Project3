@@ -1,24 +1,33 @@
 import { Button, Card, Col } from "antd";
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router";
 import "./index.scss";
 
 interface iProps {
-    imgSrc: string;
-    imgTitle: string;
-    imgDesc: string;
-    price?: number;
+    id: string;
+    img: string;
+    title: string;
+    description: string;
+    price: number;
+    image?: any;
 }
 
 const { Meta } = Card;
 
 const ProductCard: React.FC<iProps> = ({
-    imgSrc,
-    imgTitle,
-    imgDesc,
-    price = 10.0,
+    id,
+    img,
+    title,
+    description,
+    price,
+    image,
 }) => {
+    const navigate = useNavigate();
     const { t } = useTranslation();
+    const openDetailPage = () => {
+        navigate(`${id}`);
+    };
     return (
         <>
             <Col span={6}>
@@ -35,12 +44,16 @@ const ProductCard: React.FC<iProps> = ({
                             style={{
                                 height: "240px",
                             }}
-                            alt={imgTitle}
-                            src={`./medias/${imgSrc}`}
+                            alt={title}
+                            src={
+                                image
+                                    ? `http://localhost:5000/${image.data}`
+                                    : `./medias/${img}`
+                            }
                         />
                     }
                 >
-                    <Meta title={imgTitle} description={imgDesc} />
+                    <Meta title={title} description={description} />
                     <div
                         style={{
                             display: "flex",
@@ -49,7 +62,11 @@ const ProductCard: React.FC<iProps> = ({
                         }}
                     >
                         <span>{price} $</span>
-                        <Button className="card_button" size="small">
+                        <Button
+                            className="card_button"
+                            size="small"
+                            onClick={openDetailPage}
+                        >
                             {t("content.button.detail")}
                         </Button>
                     </div>
